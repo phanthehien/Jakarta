@@ -1,0 +1,19 @@
+{
+  "name": "jakarta",
+  "version": "1.0.0",
+  "description": "training agenda",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hapi",
+    "node",
+    "redux"
+  ],
+  "author": "phanthehien@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "hapi": "^16.1.0"
+  }
+}
