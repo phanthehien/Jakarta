@@ -9,7 +9,7 @@ const Hapi = require('hapi');
 const server = new Hapi.Server();
 server.connection({
     host: 'localhost',
-    port: 8000
+    port: Number(process.argv[2] || 8080)
 });
 
 // Add the route
@@ -22,6 +22,16 @@ server.route({
     }
 });
 
+server.route({
+    method: "GET",
+    path: "/",
+    handler: rootHandler
+});
+
+function rootHandler(request, reply) {
+
+    return reply('Hello hapi');
+}
 
 // Start the server
 server.start(function (err) {
